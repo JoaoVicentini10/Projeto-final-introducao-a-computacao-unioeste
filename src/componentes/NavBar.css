@@ -1,0 +1,33 @@
+.navBar {
+  background-color: #a00b5d; /* Cor de fundo opcional */
+  padding: 10px 0;
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.navBar .container {
+  display: flex;
+  justify-content: center; /* Centraliza os itens dentro do container */
+  align-items: center;
+  width: 100%; /* Garante que o container ocupe toda a largura */
+  max-width: 1200px; /* Define uma largura máxima para o container */
+}
+
+.navBar .links-container {
+  display: flex;
+  gap: 500px; /* Espaçamento entre os links */
+}
+
+.navBar a {
+  text-decoration: none;
+  color: #fff; /* Mudei a cor do texto para branco para melhor contraste */
+  font-weight: 500;
+}
+
+.navBar a:hover {
+  color: #2107b1; /* Cor do texto ao passar o mouse */
+}
+
+.navBar a.font-bold {
+  font-weight: bold; /* Estilo para link ativo */
+}

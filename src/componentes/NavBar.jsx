@@ -1,6 +1,7 @@
 import React from "react";
 import { NavBarPages } from "./NavBarPages";
 import { useNavigate } from "react-router-dom";
+import "./NavBar.css"; // Importa o arquivo CSS
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const NavBar = () => {
 
   return (
     <nav className="navBar">
-      <div>
+      <div className="container">
         <div>
           {/*
           <a href="/homepage">
@@ -20,7 +21,7 @@ const NavBar = () => {
           */}
         </div>
 
-        <div>
+        <div className="links-container">
           {NavBarPages.map((val, key) => (
             <a
               key={key}
@@ -29,9 +30,7 @@ const NavBar = () => {
                 e.preventDefault();
                 handleNavigation(val.link);
               }}
-              className={`w-1/2 lg:w-[20%] text-center text-gray-700 hover:text-gray-600 no-underline ${
-                window.location.pathname === val.link ? "font-bold" : ""
-              }`}
+              className={window.location.pathname === val.link ? "font-bold" : ""}
             >
               {val.title}
             </a>

@@ -36,7 +36,7 @@ const Login = () => {
             />
           </Grid>
 
-          <Grid size={2} offset={"auto"}>
+          <Grid size={3} offset={"auto"}>
             <Button onClick={handleLogin} variant="outlined">
               Login
             </Button>
