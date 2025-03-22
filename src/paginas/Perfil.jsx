@@ -1,5 +1,6 @@
 import React from "react";
 import "./Perfil.css"; // Importando o arquivo CSS para estilização
+import "../componentes/Progresso/Progresso.css";
 import foto from "../assets/foto_perfil.png"; // Importando a imagem local
 import ProgressoCard from "../componentes/Progresso/ProgressoCard";
 
@@ -40,10 +41,19 @@ function Perfil() {
             </div>
           </div>
         </div>
+
+        <div
+          className="progresso-roda"
+          style={{
+            background: `conic-gradient(#b7d3eb ${usuario.progresso}%, #e0e0e0 ${usuario.progresso}% 100%)`,
+          }}
+        >
+          <div className="progresso-texto">{usuario.progresso}%</div>
+        </div>
       </div>
-      <ProgressoCard projeto={"Robotica"} progresso={68} />
-      <ProgressoCard projeto={"Marco Zero"} progresso={23} />
-      <ProgressoCard projeto={"Maratona de Programação"} progresso={100} />
+      <ProgressoCard projeto={"Robotica"} descricao={"Abc"} />
+      <ProgressoCard projeto={"Marco Zero"} descricao={"Dce"} />
+      <ProgressoCard projeto={"Maratona de Programação"} descricao={"Texto"} />
     </div>
   );
 }

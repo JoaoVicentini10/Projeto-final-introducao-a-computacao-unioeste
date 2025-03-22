@@ -74,7 +74,7 @@ const HomePage = () => {
   return (
     <div>
       {/* Seção da logo e boas-vindas */}
-      <div style={{ backgroundColor: "#1b0043" }} className="welcome-wrapper">
+      <div style={{ backgroundColor: "#1a365d" }} className="welcome-wrapper">
         <div className="welcome-section">
           {/*<h1>Bem-vindo ao VEU</h1> */}
           <img src={logo} alt="Logo do VEU" className="welcome-logo" />
@@ -83,7 +83,12 @@ const HomePage = () => {
 
       {/* Caixa que envolve o carrossel e a descrição */}
       <div
-        style={{ backgroundColor: "#fff", padding: 20 }} // Mudar para backgroundColor: "#1b0043" se desejar
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          backgroundColor: "#b7d3eb",
+          padding: 20,
+        }} // Mudar para backgroundColor: "#1b0043" se desejar
         className="content-wrapper"
       >
         <div className="carousel-box">
@@ -111,15 +116,6 @@ const HomePage = () => {
             ))}
           </Swiper>
 
-          {/* Botões flutuantes */}
-          <button id="custom-prev" className="floating-button prev-button">
-            &#8249; {/* HTML para "seta para a esquerda" */}
-          </button>
-          <button id="custom-next" className="floating-button next-button">
-            &#8250; {/* HTML para "seta para a direita" */}
-          </button>
-
-          {/* Descrição correspondente ao slide ativo */}
           <div className="description-container">
             <p>{highlightKeywords(items[activeIndex].description)}</p>
           </div>

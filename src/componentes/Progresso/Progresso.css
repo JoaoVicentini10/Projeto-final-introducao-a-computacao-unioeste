@@ -2,7 +2,7 @@
 .perfil-progresso {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  justify-content: space-between;
   border-style: solid;
   border-width: 2;
   border-radius: 15px;
@@ -18,7 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: conic-gradient(#4caf50 75%, #e0e0e0 75% 100%);
+  background: conic-gradient(#1a365d 75%, #e0e0e0 75% 100%);
 }
 
 .progresso-texto {
@@ -35,6 +35,5 @@
 
 .project-description {
   display: flex;
-  flex-direction: column;
-  width: 70%;
+  flex-direction: row;
 }

@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: "Arial", sans-serif;
-  background-color: #f4f4f9;
+  background-color: #1a365d;
   color: #333;
 }
 
@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-items: center;
-  max-width: 50%;
+  max-width: 80%;
   margin: 50px auto;
   padding: 20px;
   background-color: #fff;
@@ -25,7 +25,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center; /* Alinha os itens no topo */
-  gap: 20%;
+  gap: 10%;
   margin-bottom: 20px;
   border-style: solid;
   border-width: 2;
@@ -37,7 +37,7 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 5px solid #4caf50;
+  border: 5px solid #1a365d;
   object-fit: cover;
 }
 
@@ -70,7 +70,7 @@ body {
 
 .info-label {
   font-weight: bold;
-  color: #4caf50;
+  color: #1a365d;
   margin-right: 10px;
 }
 

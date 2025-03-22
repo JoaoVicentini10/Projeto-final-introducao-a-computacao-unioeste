@@ -1,20 +1,24 @@
 import React from "react";
 import "./Progresso.css";
 
-function ProgressoCard({ projeto, progresso }) {
+function ProgressoCard({ projeto, descricao }) {
   return (
     <div className="perfil-progresso">
-      <div
-        className="progresso-roda"
-        style={{
-          background: `conic-gradient(#4caf50 ${progresso}%, #e0e0e0 ${progresso}% 100%)`,
-        }}
-      >
-        <div className="progresso-texto">{progresso}%</div>
-      </div>
       <div className="project-description">
-        <h3>{projeto}</h3>
-        <p className="progresso-label">{`${progresso}% das horas completadas`}</p>
+        <div style={{ alignContent: "center", margin: 20, padding: 2 }}>
+          <h3>{projeto}</h3>
+        </div>
+
+        <div>
+          <p className="progresso-label">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
+            itaque, quaerat libero dicta repellat culpa dignissimos quia impedit
+            perferendis sapiente animi delectus modi nemo architecto autem
+            voluptatem veniam laborum aliquam deserunt vero tempora. Non ab
+            tempore repellendus omnis molestias sunt soluta eveniet mollitia,
+            consectetur praesentium inventore maiores voluptatibus suscipit a.
+          </p>
+        </div>
       </div>
     </div>
   );

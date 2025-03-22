@@ -3,10 +3,18 @@
   width: 100%;
   padding: 10px 0;
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 80px;
   width: 100%;
   justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  border-radius: 0;
+  transition: background-color 0.3s, height 0.3s;
+}
+
+.navBar:not(:hover) {
+  height: 50px;
+  background-color: #d17aa3;
 }
 
 .navBar .container {
@@ -16,7 +24,6 @@
   width: 100%; /* Garante que o container ocupe toda a largura */
   max-width: 1200px; /* Define uma largura máxima para o container */
 }
-
 
 .navBar .links-container {
   display: flex;
