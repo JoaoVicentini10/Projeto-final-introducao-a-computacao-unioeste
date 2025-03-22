@@ -8,7 +8,6 @@ import maratona from "../assets/maratona.PNG"; // Caminho corrigido
 import marco from "../assets/marco.png"; // Caminho corrigido
 import robotica from "../assets/robotica.png"; // Caminho corrigido
 import logo from "../assets/logo_veu.png"; // Caminho corrigido
-import Footer from "../componentes/Footer.jsx"; // Caminho corrigido
 import "./HomePage.css";
 
 const HomePage = () => {
@@ -16,11 +15,7 @@ const HomePage = () => {
 
   // Função para destacar as palavras-chave
   const highlightKeywords = (text) => {
-    const keywords = [
-      "Horas/aula:",
-      "Coordenador(a) do projeto:",
-      "E-mail:",
-    ];
+    const keywords = ["Horas/aula:", "Coordenador(a) do projeto:", "E-mail:"];
 
     // Divide o texto em partes com base nas palavras-chave
     const parts = text.split(new RegExp(`(${keywords.join("|")})`, "g"));
@@ -78,43 +73,59 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="homePage">
+    <div>
       {/* Seção da logo e boas-vindas */}
-      <div className="welcome-section">
+      <div style={{ backgroundColor: "#1b0043" }} className="welcome-wrapper">
+        <div className="welcome-section">
           {/*<h1>Bem-vindo ao VEU</h1> */}
-        <img src={logo} alt="Logo do VEU" className="welcome-logo" />
-      </div>
-
-      {/* Caixa que envolve o carrossel e a descrição */}
-      <div className="carousel-box">
-        {/* Carrossel */}
-        <Swiper
-          spaceBetween={30}
-          centeredSlides={true}
-          autoplay={{ delay: 8000, disableOnInteraction: false }}
-          pagination={{ clickable: true }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper"
-          onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)} // Atualiza o slide ativo
-        >
-          {items.map((item) => (
-            <SwiperSlide key={item.id}>
-              <div className="slide-container">
-                <img src={item.image} alt={`Imagem ${item.id}`} className="slide-image" />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
-        {/* Descrição correspondente ao slide ativo */}
-        <div className="description-container">
-          <p>{highlightKeywords(items[activeIndex].description)}</p>
+          <img src={logo} alt="Logo do VEU" className="welcome-logo" />
         </div>
       </div>
 
-      {/* Rodapé */}
-      <Footer />
+      {/* Caixa que envolve o carrossel e a descrição */}
+      <div
+        style={{ backgroundColor: "#fff", padding: 20 }} // Mudar para backgroundColor: "#1b0043" se desejar
+        className="content-wrapper"
+      >
+        <div className="carousel-box">
+          {/* Carrossel */}
+          <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{ delay: 8000, disableOnInteraction: false }}
+            pagination={{ clickable: true }}
+            navigation={{ nextEl: "#custom-next", prevEl: "#custom-prev" }}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper"
+            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)} // Atualiza o slide ativo
+          >
+            {items.map((item) => (
+              <SwiperSlide key={item.id}>
+                <div className="slide-container">
+                  <img
+                    src={item.image}
+                    alt={`Imagem ${item.id}`}
+                    className="slide-image"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Botões flutuantes */}
+          <button id="custom-prev" className="floating-button prev-button">
+            &#8249; {/* HTML para "seta para a esquerda" */}
+          </button>
+          <button id="custom-next" className="floating-button next-button">
+            &#8250; {/* HTML para "seta para a direita" */}
+          </button>
+
+          {/* Descrição correspondente ao slide ativo */}
+          <div className="description-container">
+            <p>{highlightKeywords(items[activeIndex].description)}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

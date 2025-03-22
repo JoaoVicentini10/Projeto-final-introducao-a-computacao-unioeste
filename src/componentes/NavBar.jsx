@@ -13,14 +13,6 @@ const NavBar = () => {
   return (
     <nav className="navBar">
       <div className="container">
-        <div>
-          {/*
-          <a href="/homepage">
-            <img src={logo} className="h-12" alt="Logo Dilettare" />
-          </a>
-          */}
-        </div>
-
         <div className="links-container">
           {NavBarPages.map((val, key) => (
             <a
@@ -30,7 +22,9 @@ const NavBar = () => {
                 e.preventDefault();
                 handleNavigation(val.link);
               }}
-              className={window.location.pathname === val.link ? "font-bold" : ""}
+              className={
+                window.location.pathname === val.link ? "font-bold" : ""
+              }
             >
               {val.title}
             </a>

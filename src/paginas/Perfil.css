@@ -1,100 +1,79 @@
 /* Estilos gerais */
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-  }
-  
-  .perfil-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Layout do topo (foto, nome e progresso) */
-  .perfil-topo {
-    display: flex;
-    align-items: flex-start; /* Alinha os itens no topo */
-    gap: 30px; /* Espaço entre a foto e a roda de progresso */
-    margin-bottom: 30px;
-  }
-  
-  .perfil-foto-container {
-    text-align: center;
-  }
-  
-  .perfil-foto img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid #4caf50;
-    object-fit: cover;
-  }
-  
-  .perfil-nome {
-    font-size: 24px;
-    color: #333;
-    margin-top: 10px;
-  }
-  
-  /* Roda de progresso */
-  .perfil-progresso {
-    margin-left: 20px; /* Move a roda um pouco para a direita */
-    text-align: center;
-  }
-  
-  .progresso-roda {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: conic-gradient(#4caf50 75%, #e0e0e0 75% 100%);
-  }
-  
-  .progresso-texto {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .progresso-label {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #666;
-  }
-  
-  /* Detalhes do perfil */
-  .perfil-detalhes {
-    text-align: center;
-  }
-  
-  .perfil-bio {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  .perfil-info {
-    text-align: left;
-    margin-top: 20px;
-  }
-  
-  .info-item {
-    margin-bottom: 15px;
-  }
-  
-  .info-label {
-    font-weight: bold;
-    color: #4caf50;
-    margin-right: 10px;
-  }
-  
-  .info-valor {
-    color: #555;
-  }
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.perfil-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  max-width: 50%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout do topo (foto, nome e progresso) */
+.perfil-topo {
+  display: flex;
+  padding: 20px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; /* Alinha os itens no topo */
+  gap: 20%;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width: 2;
+  border-radius: 15px;
+  border-color: rgba(0, 0, 0, 0.042);
+}
+
+.perfil-foto img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #4caf50;
+  object-fit: cover;
+}
+
+.perfil-nome {
+  font-size: 24px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Detalhes do perfil */
+.perfil-detalhes {
+  display: flex;
+  justify-content: center;
+}
+
+.perfil-bio {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.perfil-info {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.info-item {
+  margin-bottom: 15px;
+}
+
+.info-label {
+  font-weight: bold;
+  color: #4caf50;
+  margin-right: 10px;
+}
+
+.info-valor {
+  color: #555;
+}

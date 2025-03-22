@@ -1,0 +1,40 @@
+/* Roda de progresso */
+.perfil-progresso {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  border-style: solid;
+  border-width: 2;
+  border-radius: 15px;
+  border-color: rgba(0, 0, 0, 0.042);
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.progresso-roda {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: conic-gradient(#4caf50 75%, #e0e0e0 75% 100%);
+}
+
+.progresso-texto {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.progresso-label {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.project-description {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
