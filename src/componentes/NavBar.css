@@ -1,19 +1,12 @@
 .navBar {
-  background-color: #808080; /* Cor de fundo opcional */
-  position: fixed; /*garante que a barra fique fixada na tela*/
+  background-color: #a00b5d; /* Cor de fundo opcional */
+  width: 100%;
   padding: 10px 0;
   display: flex;
   height: 80px;
   width: 100%;
   justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  z-index: 1000;
-  transition: background-color 0.3s, height 0.3s; /*suavisa a transição para a barra*/
-  border-radius: 0%;
-}
-
-.navBar:not(:hover){
-  height: 50px;
-  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0;
 }
 
 .navBar .container {

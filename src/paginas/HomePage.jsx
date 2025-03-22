@@ -4,11 +4,10 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import maratona from "../assets/maratona.PNG";
-import marco from "../assets/marco.png";
-import robotica from "../assets/robotica.png";
-import logo from "../assets/logo_veu.png";
-import Footer from "../componentes/Footer.jsx";
+import maratona from "../assets/maratona.PNG"; // Caminho corrigido
+import marco from "../assets/marco.png"; // Caminho corrigido
+import robotica from "../assets/robotica.png"; // Caminho corrigido
+import logo from "../assets/logo_veu.png"; // Caminho corrigido
 import "./HomePage.css";
 
 const HomePage = () => {
@@ -16,7 +15,11 @@ const HomePage = () => {
 
   const highlightKeywords = (text) => {
     const keywords = ["Horas/aula:", "Coordenador(a) do projeto:", "E-mail:"];
-    return text.split(new RegExp(`(${keywords.join("|")})`, "g")).map((part, index) =>
+
+    // Divide o texto em partes com base nas palavras-chave
+    const parts = text.split(new RegExp(`(${keywords.join("|")})`, "g"));
+
+    return parts.map((part, index) =>
       keywords.includes(part) ? (
         <strong key={index} className="highlight">
           {part}
@@ -69,39 +72,59 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="homePage">
-      <div className="welcome-section">
-        <img src={logo} alt="Logo do VEU" className="welcome-logo" />
+    <div>
+      {/* Seção da logo e boas-vindas */}
+      <div style={{ backgroundColor: "#1b0043" }} className="welcome-wrapper">
+        <div className="welcome-section">
+          {/*<h1>Bem-vindo ao VEU</h1> */}
+          <img src={logo} alt="Logo do VEU" className="welcome-logo" />
+        </div>
       </div>
-    <div className="carousel-wrapper">
-      <div className="carousel-box">
+
+      {/* Caixa que envolve o carrossel e a descrição */}
+      <div
+        style={{ backgroundColor: "#fff", padding: 20 }} // Mudar para backgroundColor: "#1b0043" se desejar
+        className="content-wrapper"
+      >
+        <div className="carousel-box">
+          {/* Carrossel */}
           <Swiper
             spaceBetween={30}
-            centeredSlides
+            centeredSlides={true}
             autoplay={{ delay: 8000, disableOnInteraction: false }}
             pagination={{ clickable: true }}
-            navigation
+            navigation={{ nextEl: "#custom-next", prevEl: "#custom-prev" }}
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
-            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)} // Atualiza o slide ativo
           >
             {items.map((item) => (
               <SwiperSlide key={item.id}>
                 <div className="slide-container">
-                  <img src={item.image} alt={`Imagem ${item.id}`} className="slide-image" />
+                  <img
+                    src={item.image}
+                    alt={`Imagem ${item.id}`}
+                    className="slide-image"
+                  />
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
 
+          {/* Botões flutuantes */}
+          <button id="custom-prev" className="floating-button prev-button">
+            &#8249; {/* HTML para "seta para a esquerda" */}
+          </button>
+          <button id="custom-next" className="floating-button next-button">
+            &#8250; {/* HTML para "seta para a direita" */}
+          </button>
+
+          {/* Descrição correspondente ao slide ativo */}
           <div className="description-container">
             <p>{highlightKeywords(items[activeIndex].description)}</p>
           </div>
         </div>
-      </div>  
-      
-
-      <Footer />
+      </div>
     </div>
   );
 };
