@@ -1,0 +1,42 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .login-container {
+    display: flex;
+    /*justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    height: 100vh;           /* Faz a altura do container ser 100% da tela */
+    width: 100%;             /* Faz o container ocupar 100% da largura da tela */
+    background-color: #f0f0f0; /* Cor de fundo, opcional */
+  }
+  
+  .form {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+  }
+  
+  img {
+    margin-bottom: 20px; /* Espaço entre o logo e o formulário */
+  }
+  
+  .MuiTextField-root {
+    margin-bottom: 20px; /* Espaço entre os campos de input */
+    width: 350px;
+  }
+  
+  button {
+    position: relative;
+    left: 138px;
+    margin-top: 10px; /* Espaço acima do botão de login */
+  }
+  

@@ -1,92 +1,118 @@
-/* Estilos da página */
+:root {
+  --primary-color: #1a365d;
+  --secondary-color: #f9f9f9;
+  --highlight-color: #c90d81;
+  --text-color: black;
+}
+
 .homePage {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  /* Seção da logo e boas-vindas */
-  .welcome-section {
-    margin-bottom: 40px; /* Espaço abaixo da seção */
-  }
-  
-  .welcome-section h1 {
-    font-size: 5.5rem; /* Tamanho do texto */
-    color: #1a365d; /* Cor do texto */
-    margin-bottom: 30px; /* Espaço abaixo do título */
-  }
-  
-  .welcome-logo {
-    width: 800px; /* Largura da logo */
-    height: auto; /* Mantém a proporção da logo */
-    border-radius: 12px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(255, 8, 8, 0.1); /* Sombra suave */
-  }
-  
-  /* Caixa que envolve o carrossel e a descrição */
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  gap: 40px;
+}
+
+.welcome-section {
+  margin-bottom: 40px;
+}
+
+.welcome-logo {
+  margin-top: 100px;
+  max-width: 900px;
+  height: auto;
+}
+.carousel-wrapper {
+  position: relative;
+  width: 90%;  /* Define a largura do retângulo */
+  padding: 40px;  /* Espaço interno */
+  background-color: rgba(255, 255, 255, 0.9); /* Branco com leve transparência */
+  border-radius: 16px; /* Bordas arredondadas */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo dentro */
+  align-items: center;
+  margin: 40px auto; /* Centraliza na página */
+}
+
+.carousel-box {
+  position: relative;
+  width: 80%;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 60px;
+}
+
+.mySwiper {
+  width: 75%;
+  height: 75%;
+  margin: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.slide-container {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  height: 50%;
+}
+
+.slide-image {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.description-container {
+  text-align: justify;
+  padding: 15px;
+  background-color: #ccd1b8;
+  /*border-top: 2px solid var(--primary-color);*/
+  border-radius: 12px;
+  height: 600px;
+  width: 50%;
+  display: flex;
+  align-items: right;
+  justify-content: center;
+}
+
+.description-container p {
+  margin: 0;
+  font-size: medium;
+  line-height: 1.6;
+  white-space: pre-line;
+  color: var(--text-color);
+}
+
+.highlight {
+  color: var(--highlight-color);
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
   .carousel-box {
-    width: 50%; /* Largura da caixa */
-    margin: 0 auto; /* Centraliza a caixa */
-    padding: 20px;
-    background-color: #f9f9f9; /* Cor de fundo da caixa */
-    border: 2px solid #1a365d; /* Borda azul escura */
-    border-radius: 12px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 90%;
   }
-  
-  /* Estilos do carrossel */
+
   .mySwiper {
-    width: 100%;
-    height: 400px; /* Altura do carrossel */
-    margin-bottom: 20px; /* Espaço abaixo do carrossel */
-    border-radius: 12px;
-    overflow: hidden;
+    max-height: 60vh;
   }
-  
-  /* Container do slide */
-  .slide-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  
-  /* Imagem do slide */
-  .slide-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Mantém a proporção da imagem */
-    border-radius: 12px; /* Bordas arredondadas */
-  }
-  
-  /* Container da descrição */
+
   .description-container {
-    text-align: left; /* Alinha o texto à esquerda */
-    padding: 15px;
-    background-color: #fff; /* Fundo branco para a descrição */
-    border-top: 2px solid #1a365d; /* Linha divisória */
-    border-radius: 0 0 12px 12px; /* Bordas arredondadas apenas na parte inferior */
+    min-height: 120px;
   }
-  
-  /* Estilo do texto da descrição */
+
   .description-container p {
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.6; /* Melhora a legibilidade do texto */
-    white-space: pre-line; /* Respeita as quebras de linha no texto */
-    color: black;
+    font-size: 12px;
   }
-
-  .highlight {
-    color: #c90d81; /* Cor laranja, por exemplo */
-    font-weight: bold;
-  }
-
-  .homePage {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Garante que a página ocupe pelo menos a altura da tela */
-  }
-  
-  .carousel-box {
-    flex: 1; /* Faz com que o conteúdo principal ocupe o espaço restante */
-  }
+}

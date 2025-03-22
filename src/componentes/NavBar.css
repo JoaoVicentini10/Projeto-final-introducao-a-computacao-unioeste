@@ -1,8 +1,19 @@
 .navBar {
-  background-color: #a00b5d; /* Cor de fundo opcional */
+  background-color: #808080; /* Cor de fundo opcional */
+  position: fixed; /*garante que a barra fique fixada na tela*/
   padding: 10px 0;
   display: flex;
+  height: 80px;
+  width: 100%;
   justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  z-index: 1000;
+  transition: background-color 0.3s, height 0.3s; /*suavisa a transição para a barra*/
+  border-radius: 0%;
+}
+
+.navBar:not(:hover){
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .navBar .container {
@@ -13,14 +24,16 @@
   max-width: 1200px; /* Define uma largura máxima para o container */
 }
 
+
 .navBar .links-container {
   display: flex;
   gap: 500px; /* Espaçamento entre os links */
 }
 
 .navBar a {
+  font-size: 20px;
   text-decoration: none;
-  color: #fff; /* Mudei a cor do texto para branco para melhor contraste */
+  color: #000000; /* Mudei a cor do texto para branco para melhor contraste */
   font-weight: 500;
 }
 

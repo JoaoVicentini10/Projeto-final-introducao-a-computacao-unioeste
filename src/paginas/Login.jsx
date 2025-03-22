@@ -3,6 +3,7 @@ import Grid from "@mui/material/Grid2";
 import { Button, TextField } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/unioeste.png";
+import "./Login.css";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -12,11 +13,11 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="login-container"> {/* Classe para garantir o layout de tela cheia */}
       <form className="form">
         <img src={logo} alt="Logo Unioeste" />
-        <Grid container spacing={2}>
-          <Grid size={12}>
+        <Grid container spacing={2} direction="column" alignItems="center">
+          <Grid item xs={12}>
             <TextField
               fullWidth
               label="Usuário"
@@ -25,7 +26,7 @@ const Login = () => {
               required
             />
           </Grid>
-          <Grid size={12}>
+          <Grid item xs={12}>
             <TextField
               fullWidth
               label="Senha"
@@ -36,7 +37,7 @@ const Login = () => {
             />
           </Grid>
 
-          <Grid size={3} offset={"auto"}>
+          <Grid item xs={3}>
             <Button onClick={handleLogin} variant="outlined">
               Login
             </Button>
