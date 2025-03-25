@@ -11,11 +11,11 @@ function Perfil() {
     foto: foto, // Usando a imagem importada
     email: "joao.silva@example.com",
     localizacao: "São Paulo, Brasil",
-    habilidades: ["React", "JavaScript", "CSS", "HTML"],
+    Ano: "2° ano",
   };
 
   return (
-    <div className="perfil-container">
+    <div className="perfil-container" style={{marginTop: "120px"}}>
       <div className="perfil-topo">
         <div className="perfil-foto">
           <img src={usuario.foto} alt="Foto do usuário" />
@@ -34,10 +34,8 @@ function Perfil() {
               <span className="info-valor">{usuario.localizacao}</span>
             </div>
             <div className="info-item">
-              <span className="info-label">Habilidades:</span>
-              <span className="info-valor">
-                {usuario.habilidades.join(", ")}
-              </span>
+              <span className="info-label">Ano:</span>
+              <span className="info-valor">{usuario.Ano}</span>
             </div>
           </div>
         </div>
@@ -48,12 +46,12 @@ function Perfil() {
             background: `conic-gradient(#b7d3eb ${usuario.progresso}%, #e0e0e0 ${usuario.progresso}% 100%)`,
           }}
         >
-          <div className="progresso-texto">{usuario.progresso}%</div>
+          <div className="progresso-texto">{usuario.progresso}80%</div>
         </div>
       </div>
-      <ProgressoCard projeto={"Robotica"} descricao={"Abc"} />
-      <ProgressoCard projeto={"Marco Zero"} descricao={"Dce"} />
-      <ProgressoCard projeto={"Maratona de Programação"} descricao={"Texto"} />
+      <ProgressoCard projeto={"Robotica"} descricao={"Abc"} cargaHoraria={20} />
+      <ProgressoCard projeto={"Marco Zero"} descricao={"Dce"} cargaHoraria={30} />
+      <ProgressoCard projeto={"Maratona de Programação"} descricao={"Texto"}  cargaHoraria={40}/>
     </div>
   );
 }

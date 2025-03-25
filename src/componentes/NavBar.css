@@ -1,5 +1,5 @@
 .navBar {
-  background-color: #a00b5d; /* Cor de fundo opcional */
+  background-color: #b7d3eb; /* Cor de fundo opcional */
   width: 100%;
   padding: 10px 0;
   display: flex;
@@ -14,7 +14,7 @@
 
 .navBar:not(:hover) {
   height: 50px;
-  background-color: #d17aa3;
+  background-color: #c8e5ff;
 }
 
 .navBar .container {

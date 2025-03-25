@@ -13,7 +13,7 @@
 .carousel-box {
   display: flex;
   flex-direction: row;
-  width: 90%; /* Largura da caixa */
+  width: 70%; /* Largura da caixa */
   padding: 20px;
   background-color: #f9f9f9; /* Cor de fundo da caixa */
   border-radius: 12px; /* Bordas arredondadas */

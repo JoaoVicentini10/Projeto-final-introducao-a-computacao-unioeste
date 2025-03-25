@@ -12,13 +12,13 @@
 }
 
 .progresso-roda {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: conic-gradient(#1a365d 75%, #e0e0e0 75% 100%);
+  background: conic-gradient(#b7d3eb 80%, #e0e0e0 75% 100%);
 }
 
 .progresso-texto {
@@ -28,12 +28,16 @@
 }
 
 .progresso-label {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #666;
+  margin: 60px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
 }
 
 .project-description {
   display: flex;
   flex-direction: row;
+  width: 90%;
+  max-width: 100%;
+  justify-content: space-between;
 }
